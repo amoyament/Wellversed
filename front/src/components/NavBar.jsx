@@ -10,6 +10,8 @@ import Footer from "./Footer";
 function NavBar() {
   // State to toggle navbar links
   const [showLinks, setShowLinks] = useState(false);
+  //Set up to only show sigin in if not logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Function to toggle links
   const toggleLinks = () => {
@@ -42,7 +44,14 @@ function NavBar() {
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/signin">Sing In</Link>
+                {!isLoggedIn && (
+                  <div className="signin-section">
+                    <Link to="/signin" className="signin-link">
+                      Sign In
+                      <FaUserCircle className="signin-icon" />
+                    </Link>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
