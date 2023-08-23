@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import "./NavBar.css";
 import Home from "./homeComponents/Home";
+import Contact from "./contactComponents/Contact";
 import Footer from "./Footer";
 
 function NavBar() {
@@ -65,7 +66,7 @@ function NavBar() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Adjust paths to created components */}
-        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<Home />} />
         <Route path="/" element={<Home />} />
       </Routes>
